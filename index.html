@@ -56,7 +56,7 @@
     </div>
     
     <script src="https://cdn.jsdelivr.net/gh/whatisthisworld/notyobusiness/jquery-3.4.1.min.js"></script>
-    <script src="https://rawcdn.githack.com/whatisthisworld/notyobusiness/7643a267d8e20b7923624582506e010fb4c6b604/c2runtime.js"></script>
+    <script src="https://raw.githack.com/whatisthisworld/notyobusiness/main/c2runtime.js"></script>
 
     <script>
         jQuery(document).ready(function ()
@@ -83,20 +83,19 @@
             if (!navigator.serviceWorker)
                 return;
             
-            try {
-                // Service Worker URL updated to CDN
-                navigator.serviceWorker.register("sw.js", { scope: "./" })
-                .then(function (reg)
-                {
-                    console.log("Registered service worker on " + reg.scope);
-                })
-                .catch(OnRegisterSWError);
-            }
-            catch (e)
-            {
-                OnRegisterSWError(e);
-            }
-        };
-    </script>
-</body> 
+           try {
+        // Service Worker URL updated to Githack CDN
+        navigator.serviceWorker.register("https://raw.githack.com/whatisthisworld/notyobusiness/main/sw.js", { scope: "./" })
+        .then(function (reg)
+        {
+            console.log("Registered service worker on " + reg.scope);
+        })
+        .catch(OnRegisterSWError);
+    }
+    catch (e)
+    {
+        OnRegisterSWError(e);
+    }
+};
+</script>
 </html>
