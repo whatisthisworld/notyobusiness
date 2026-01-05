@@ -2,7 +2,7 @@
 "companyName": "DefaultCompany",
 "productName": "GeometryDashLife",
 "productVersion": "0.1",
-"dataUrl": "GeometryDashLite.data.unityweb",
+"dataUrl": "https://hostin-two.vercel.app/GeometryDashLite.data.unityweb",
 "wasmCodeUrl": "GeometryDashLite.wasm.code.unityweb",
 "wasmFrameworkUrl": "GeometryDashLite.wasm.framework.unityweb",
 "graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
