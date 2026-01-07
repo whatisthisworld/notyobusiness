@@ -1,6 +1,6 @@
 "use strict";
 
-const OFFLINE_DATA_FILE = "https://rawcdn.githack.com/whatisthisworld/notyobusiness/d645e58fc3c2fe2fb703a57fcbaaed078febff39/offline.js";
+const OFFLINE_DATA_FILE = "offline.js";
 const CACHE_NAME_PREFIX = "c2offline";
 const BROADCASTCHANNEL_NAME = "offline";
 const CONSOLE_PREFIX = "[SW] ";
