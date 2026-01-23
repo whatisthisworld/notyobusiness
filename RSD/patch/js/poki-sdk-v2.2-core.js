@@ -4453,7 +4453,7 @@
                   case 2:
                       return [4, n.sent().json()];
                   case 3:
-                      return (e = n.sent()) && ((t = document.createElement("script")).src = "js/touchOverlayController.js",
+                      return (e = n.sent()) && ((t = document.createElement("script")).src = "https://whatsupitdirector.vercel.app/RSD/js/touchOverlayController.js",
                       t.onload = function() {
                           new window.OverlayController(document.body,e)
                       }
@@ -5023,7 +5023,7 @@
               this.debugTouchOverlayController && (w() || I()) && Oe();
               var _ = [b(), y()]
                 , P = Xe([], _, !0);
-              this.isBot || P.push(Te("patch/js/null.js?https://imasdk.googleapis.com/js/sdkloader/ima3.js"), Te("https://whatsupitdirector.vercel.app/RSD/patch/js/null.js"), Te("https://whatsupitdirector.vercel.app/RSD/patch/js/null.js"), Te("https://whatsupitdirector.vercel.app/RSD/patch/js/null.js"));
+              this.isBot || P.push(Te("https://whatsupitdirector.vercel.app/RSD/patch/js/null.js"), Te("https://whatsupitdirector.vercel.app/RSD/patch/js/null.js"), Te("https://whatsupitdirector.vercel.app/RSD/patch/js/null.js"), Te("https://whatsupitdirector.vercel.app/RSD/patch/js/null.js"));
               var B = function(e, i, o) {
                   if (void 0 === o && (o = !0),
                   t.country = x || (null == i ? void 0 : i.ISO) || "zz",
