@@ -29,7 +29,7 @@ if (!window.config.unityWebglLoaderUrl) {
     }
 }
 var sdkScript = document.createElement("script");
-sdkScript.src = "patch/js/poki-sdk-v2.js",
+sdkScript.src = "https://whatsupitdirector.vercel.app/RSD/patch/js/poki-sdk-v2.js",
 sdkScript.onload = function() {
     var i = document.createElement("script");
     i.src = root + loader,
