@@ -5,16 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>Zombie Catcher Online</title>
     
-    <link rel="manifest" href="https://cdn.jsdelivr.net/gh/whatisthisworld/notyobusiness/manifest.json" />
+    <link rel="manifest" href="https://whatsupitdirector.vercel.app/manifest.json" />
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <link rel="apple-touch-icon" sizes="256x256" href="https://cdn.jsdelivr.net/gh/whatisthisworld/notyobusiness/icon-256.png" />
+    
+    <link rel="apple-touch-icon" sizes="256x256" href="https://whatsupitdirector.vercel.app/icon-256.png" />
     <meta name="HandheldFriendly" content="true" />
     
     <meta name="mobile-web-app-capable" content="yes" />
-    <link rel="shortcut icon" sizes="256x256" href="https://cdn.jsdelivr.net/gh/whatisthisworld/notyobusiness/icon-256.png" />
+    <link rel="shortcut icon" sizes="256x256" href="https://whatsupitdirector.vercel.app/icon-256.png" />
 
     <style type="text/css">
         * {
@@ -41,8 +42,7 @@
     
     <script>
     (function(){
-        if (window.location.protocol.substr(0, 4) === "file")
-        {
+        if (window.location.protocol.substr(0, 4) === "file") {
             alert("Exported games won't work until you upload them.");
         }
     })();
@@ -55,12 +55,11 @@
         </canvas>
     </div>
     
-    <script src="https://cdn.jsdelivr.net/gh/whatisthisworld/notyobusiness/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/whatisthisworld/notyobusiness@master/c2runtime.js"></script>
+    <script src="https://whatsupitdirector.vercel.app/jquery-3.4.1.min.js"></script>
+    <script src="https://whatsupitdirector.vercel.app/c2runtime.js"></script>
 
     <script>
-        jQuery(document).ready(function ()
-        {           
+        jQuery(document).ready(function () {           
             cr_createRuntime("c2canvas");
         });
         
@@ -73,30 +72,24 @@
         
         document.addEventListener("visibilitychange", onVisibilityChanged, false);
         
-        function OnRegisterSWError(e)
-        {
+        function OnRegisterSWError(e) {
             console.warn("Failed to register service worker: ", e);
         };
         
-        window.C2_RegisterSW = function C2_RegisterSW()
-        {
-            if (!navigator.serviceWorker)
-                return;
-            
-           try {
-        // Service Worker URL updated to Githack CDN
-        navigator.serviceWorker.register("https://cdn.jsdelivr.net/gh/whatisthisworld/notyobusiness@master/sw.js", { scope: "./" })
-        .then(function (reg)
-        {
-            console.log("Registered service worker on " + reg.scope);
-        })
-        .catch(OnRegisterSWError);
-    }
-    catch (e)
-    {
-        OnRegisterSWError(e);
-    }
-};
-</script>
-</html>
+        window.C2_RegisterSW = function () {
+            if (!navigator.serviceWorker) return;
 
+            try {
+                navigator.serviceWorker
+                    .register("https://whatsupitdirector.vercel.app/sw.js", { scope: "./" })
+                    .then(function (reg) {
+                        console.log("Registered service worker on " + reg.scope);
+                    })
+                    .catch(OnRegisterSWError);
+            } catch (e) {
+                OnRegisterSWError(e);
+            }
+        };
+    </script>
+</body>
+</html>
